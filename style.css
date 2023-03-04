@@ -1,0 +1,60 @@
+@font-face {
+	font-family: PTSans;
+	src: url(fonts/PTSans.ttf);
+}
+@keyframes color {
+  0%   	{ background-position: 50% 30%; }
+  50%  	{ background-position: 75% 40%; }
+  100%  { background-position: 50% 30%; }
+}
+.logo {
+	border-radius: 25px;
+	background-color: rgba(0, 0, 0, 0.5);
+	width: 100%;
+	clear: both;
+}
+.project {
+	display: inline;
+	align-items:center;
+}
+.projectbut {
+	margin-left: 5px;
+	font-size: 25px;
+	font-family: PTSans;
+}
+
+.imgs {
+	display: flex;
+}
+.imgs img {
+	margin-left: 1%;
+	border: 5px outset #E14539;
+}
+.imgs video {
+	margin-left: 0,5%;
+	border: 5px outset #E14539;
+}
+body {
+	background: linear-gradient(to top, #E14539 50%, rgb(15,15,15) 0%);
+	background-size: 100% 300%;
+	animation: color 10s infinite ease;
+	background-attachment: fixed;
+}
+button {
+	border-radius: 15px;
+	background-color:black;
+	color:white;
+	text-align: center;
+	-webkit-transition: all 0.25s ease;
+			transition: all 0.25s ease; 
+}
+
+button:hover {
+	color: #E14539;
+}
+p { 
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	color: #E14539;
+	font-size: 20px;
+	font-family: PTSans;
+}

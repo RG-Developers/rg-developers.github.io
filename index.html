@@ -1,13 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>My First HTML</title>
+  <title>RG Developers</title>
   <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="img/favicon.png">
 </head>
 <body>
-
-<p>The HTML head element contains meta data.</p>
-<p>Meta data is data about the HTML document.</p>
-
+	<div class="logo" id="logo">
+		<div style="display:flex;align-items:center;">
+			<img src="img/rgdev.png" width="150" height="150" style="border-radius: 25px;display: inline-block;"></img>
+			<p style="font-size: 42px; color: white;"><span onclick="this.style.textShadow = 'none'; github.setAttribute('onclick', 'opensite(\'index.html?secret=show\')')" style="text-shadow: -3px 3px #E14539">RG</span> Developers</p>
+		</div>
+		<div id="data" style="display: flex;">
+			<button onclick="showdata(this)" id="projectsbut" style="width: 25%; background: none; border:none; color: #E14539;">Проекты</button>
+			<button onclick="showdata(this)" id="teambut" style="width: 25%; background: none; border:none;">Наша Команда</button>
+			<button onclick="showdata(this)" id="linksbut" style="width: 25%; background: none; border:none;">Ссылки</button>
+			<button onclick="showdata(this)" id="announcementsbut" style="width: 25%; background: none; border:none;">Объявления</button>
+		</div>
+		
+	</div>
+	<div id="projects">
+	</div>
+	<div id="team" style="display: none;">
+		<p style="text-align: center"><span style="font-size: 45px;">Команда</span><br/>
+		<span style="font-size: 25px;">Кодеры</span><br/>
+		Benry<br/>BigKiry<br/><br/>
+		<span style="font-size: 25px;">Мапперы</span><br/>
+		Nyarkus<br/>skypaint</br><br/>
+		<span style="font-size: 25px;">Саунд-дезийн</span><br/>Крафтов<br/><br/>
+		<span style="font-size: 25px;">Художники</span><br/>Крафтов<br/><br/>
+		<span style="font-size: 25px;">Создатели бекграундов</span><br/>neurofox<br/><br/>
+		<span style="font-size: 25px;">Моделлеры</span><br/>
+		Sobaka_Psina<br/>Крафтов</p>
+	</div>
+	<div id="links" style="display: none;">
+		<p style="text-align: center" id="links-p"><span style="font-size: 35px;">Cсылки</span><br/>Project Avatar/Discord<button id="discord1" style="margin-left: 5px;" onclick="opensite('https://discord.gg/ZUFua2s94H')">&#10148;</button><br/>
+		RG Studio/Discord<button id="discord2" style="margin-left: 5px;" onclick="opensite('https://discord.gg/rg-studio-590971159244177427')">&#10148;</button><br/>
+		Github<button id="github" style="margin-left: 5px;" onclick="opensite('https://github.com/RG-Developers')">&#10148;</button><br/>
+		YouTube<button id="youtube" style="margin-left: 5px;" onclick="opensite('https://youtube.com/@rgdevteam')">&#10148;</button></p>
+	</div>
+	<div id="announcements" style="display: none;"><p id="announcements-p"></div>
+	<script type="text/javascript" src="main.js"></script>
 </body>
 </html>
