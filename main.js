@@ -9,6 +9,16 @@ var projects = [
 		"url": null,
 		"video": null,
 		"imgs": ["img/projectavatar/img1.png", "img/projectavatar/img2.png"]
+	},
+	{
+		"name": "Disintegrator", 
+		"id": "disintegrator",
+		"icon": "img/toolgun_icon.png",
+		"description": "Аддон, изменяющий Удалитель. Добавляет новые возможности и эффекты.", 
+		"created": "1 марта 2023", 
+		"url": "https:\/\/steamcommunity.com/sharedfiles/filedetails/?id=2940577632",
+		"video": null,
+		"imgs": []
 	}
 ]
 function createProject(project) {
@@ -42,7 +52,7 @@ function createProject(project) {
 		projectUrl.innerHTML = 'Мастерская Стим<button style="margin-left: 5px;">Нету</button>'
 	}
 	else {
-		projectUrl.innerHTML = 'Мастерская Стим<button style="margin-left: 5px;" onclick="opensite("' + project["url"] + '")">&#10148;</button>'
+		projectUrl.innerHTML = "Мастерская Стим<button style='margin-left: 5px;' onclick='opensite(\"" + project["url"] + "\")'>&#10148;</button>"
 	}
 	projectShowDiv.append(projectUrl);
 	if(project["imgs"] !== [] || project["imgs"] !== null) {
