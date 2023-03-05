@@ -3,9 +3,9 @@
 	src: url(fonts/PTSans.ttf);
 }
 @keyframes color {
-  0%   	{ background-position: 50% 30%; }
-  50%  	{ background-position: 75% 40%; }
-  100%  { background-position: 50% 30%; }
+  0%   	{ background-position: 10% 30%; }
+  50%  	{ background-position: 15% 40%; }
+  100%  { background-position: 10% 30%; }
 }
 .logo {
 	border-radius: 25px;
@@ -54,7 +54,7 @@ button:hover {
 }
 p { 
 	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-	color: #E14539;
+	color: #A8A8A8;
 	font-size: 20px;
 	font-family: PTSans;
 }
