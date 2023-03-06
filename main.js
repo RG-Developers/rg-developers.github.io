@@ -71,10 +71,9 @@ function createProject(project) {
 		projectImgsDiv.setAttribute("class", "imgs");
 		projectShowDiv.append(projectImgsDiv);
 		if(project["video"] !== null) {
-			let projectVideo = document.createElement("video")
+			let projectVideo = document.createElement("iframe")
 			projectVideo.setAttribute("width", "480")
 			projectVideo.setAttribute("heigth", "270")
-			projectVideo.setAttribute("controls", "controls")
 			projectVideo.setAttribute("src", project["video"])
 			projectImgsDiv.prepend(projectVideo)
 		}
@@ -88,7 +87,7 @@ function createProject(project) {
 	
 }
 var announcementsData = ["04.03.2023: Сайт Создан"]
-var	announcementsSecretData = ["04.03.2023: Здесь будут секреты"]
+var announcementsSecretData = ["04.03.2023: Здесь будут секреты"]
 function announcementsCreate() {
 	let announcementText = document.getElementById("announcements-p")
 	for (let i = 0; i < announcementsData.length; i++) {
