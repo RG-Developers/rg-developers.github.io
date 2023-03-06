@@ -59,13 +59,10 @@ function createProject(project) {
 	projectDescription.innerHTML = "Описание: " + project["description"]
 	projectShowDiv.append(projectDescription);
 	let projectUrl = document.createElement("p");
-	if(project["url"] === null) {
-		projectUrl.innerHTML = 'Мастерская Стим<button style="margin-left: 5px;">Нету</button>'
-	}
-	else {
+	if(project["url"] !== null) {
 		projectUrl.innerHTML = "Мастерская Стим<button style='margin-left: 5px;' onclick='opensite(\"" + project["url"] + "\")'>&#10148;</button>"
+		projectShowDiv.append(projectUrl);
 	}
-	projectShowDiv.append(projectUrl);
 	if(project["imgs"] !== [] || project["imgs"] !== null) {
 		let projectImgsDiv = document.createElement("div");
 		projectImgsDiv.setAttribute("class", "imgs");
@@ -73,7 +70,7 @@ function createProject(project) {
 		if(project["video"] !== null) {
 			let projectVideo = document.createElement("iframe")
 			projectVideo.setAttribute("width", "480")
-			projectVideo.setAttribute("heigth", "270")
+			projectVideo.setAttribute("height", "270")
 			projectVideo.setAttribute("src", project["video"])
 			projectImgsDiv.prepend(projectVideo)
 		}
