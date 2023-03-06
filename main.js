@@ -16,10 +16,21 @@ var projects = [
 		"icon": "img/toolgun_icon.png",
 		"description": "Аддон, изменяющий Удалитель. Добавляет новые возможности и эффекты.", 
 		"created": "1 марта 2023", 
-		"url": "https:\/\/steamcommunity.com/sharedfiles/filedetails/?id=2940577632",
-		"video": null,
+		"url": "https://steamcommunity.com/sharedfiles/filedetails/?id=2940577632",
+		"video": "https://youtu.be/vlXnAQqYjlU",
+		"imgs": []
+	},
+	{
+		"name": "Black Hole",
+		"id": "blackhole",
+		"icon": "img/blackhole/icon.png",
+		"description": "Аддон, добавляющий энтити чёрной дыры.",
+		"created": "5 марта 2023",
+		"url": "https://steamcommunity.com/sharedfiles/filedetails/?id=2943005813",
+		"video": "https://youtu.be/JPS2cZb52MA",
 		"imgs": []
 	}
+
 ]
 function createProject(project) {
 	let projectDiv = document.createElement("div");
