@@ -6,41 +6,146 @@
   <link rel="stylesheet" href="style.css">
   <link rel="shortcut icon" href="img/favicon.png">
 </head>
+<div class="background"></div>
 <body>
 	<div class="logo" id="logo">
 		<div style="display:flex;align-items:center;">
-			<img src="img/rgdev.png" width="150" height="150" style="border-radius: 25px;display: inline-block;"></img>
-			<p style="font-size: 42px; color: white;"><span onclick="this.style.textShadow = 'none'; github.setAttribute('onclick', 'opensite(\'index.html?secret=show\')')">RG</span> Developers</p>
+			<img src="img/rgdev.png" width="64" height="64" style="border-radius: 25px;display: inline-block;"/>
+			<p style="font-size: 24px; color: white;">RG Developers</p>
 		</div>
-		<div id="data" style="display: flex;">
-			<button onclick="showdata(this)" id="projectsbut" style="width: 25%; background: none; border:none; color: #E14539;">Проекты</button>
-			<button onclick="showdata(this)" id="teambut" style="width: 25%; background: none; border:none;">Наша Команда</button>
-			<button onclick="showdata(this)" id="linksbut" style="width: 25%; background: none; border:none;">Ссылки</button>
-			<button onclick="showdata(this)" id="announcementsbut" style="width: 25%; background: none; border:none;">Объявления</button>
+		<div id="header" style="display:flex;align-items:center;text-align: center;" class="centered">
+			<button onclick="h_open(event, 'main')" class="h_tab active">Главная</button>
+			<button onclick="h_open(event, 'projects')" class="h_tab">Проекты</button>
+			<button onclick="h_open(event, 'team')" class="h_tab">Команда</button>
+			<button onclick="h_open(event, 'links')" class="h_tab">Ссылки</button>
+			<button onclick="h_open(event, 'announcements')" class="h_tab">Объявления</button>
 		</div>
-		
 	</div>
-	<div id="projects">
+	<div id="main" class="h_tabcontent" style="display:block;align-items:center;">
+		<h3 class="centered">RG Developers</h3>
+		<h4 class="centered">[ВСТАВИТЬ КРАТКОЕ ОПИСАНИЕ]</h4>
+		<p class="centered">[ВСТАВИТЬ ОПИСАНИЕ]</p>
 	</div>
-	<div id="team" style="display: none;">
-		<p style="text-align: center"><span style="font-size: 45px;">Команда</span><br/>
-		<span style="font-size: 25px;">Кодеры</span><br/>
-		Benry<br/>BigKiry<br/><br/>
-		<span style="font-size: 25px;">Мапперы</span><br/>
-		Nyarkus<br/>skypaint</br><br/>
-		<span style="font-size: 25px;">Саунд-дезийн</span><br/>Крафтов<br/><br/>
-		<span style="font-size: 25px;">Художники</span><br/>Крафтов<br/><br/>
-		<span style="font-size: 25px;">Создатели бекграундов</span><br/>neurofox<br/><br/>
-		<span style="font-size: 25px;">Моделлеры</span><br/>
-		Sobaka_Psina<br/>Крафтов</p>
+	<div id="projects" class="h_tabcontent" style="display:none;align-items:center;">
+		<h3 class="centered">Проекты</h3>
+		<button class="accordion">[СБОРКА] Atomic GMod</button>
+		<div class="panel">
+		  <h4>Atomic GMod - это сборка аддонов, сделанная для того что-бы повторить механики и вид игры Atomic Heart</br>
+		  Не обошлось без своих аддонов.</h2>
+			<button onclick="goto('https://steamcommunity.com/sharedfiles/filedetails/?id=2950584137')" 
+		      style="width: 15%; margin-top: 5px; background-color: #353535">Мастерская Steam</button><br/>
+		  <iframe width="640" height="360" style="margin-top: 5px;" src="https://www.youtube.com/embed/juzYFxJanGM" title="
+Превращаем GARRY'S MOD в ATOMIC HEART | АТОМНОЕ СЕРДЦЕ на SOURCE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+			<div class="panel" style="max-height: 100%; margin-top: 5px;">
+			  <p>CHARLES | Scanner - Аддон, добавляющий сканер из Atomic Heart.</p>
+			  <img src="img/atomic_gmod/scanner.png" height="144"/>
+			</div>
+			<div class="panel" style="max-height: 100%; margin-top: 5px;">
+			  <p>Atomic Heart: Abilities | CHARLES Glove - Аддон, добавляющий способности перчатки из Atomic Heart</p>
+			  <img src="img/atomic_gmod/abil1.jpg" height="144"/> <img src="img/atomic_gmod/abil2.jpg" height="144"/>
+			  <img src="img/atomic_gmod/abil3.jpg" height="144"/> <img src="img/atomic_gmod/abil4.jpg" height="144"/>
+			  <img src="img/atomic_gmod/abil5.jpg" height="144"/>
+			</div>
+			<div class="panel" style="max-height: 100%; margin-top: 5px;">
+			  <p>CHARLES | Looting Animation - Анимация лутинга предметов.</p>
+			</div>
+			<div class="panel" style="max-height: 100%; margin-top: 5px;">
+			  <p>Remshkaf "ELEANORA" | Upgrade station - Добавляет Элеанору, и заставляет игрока быть рядом что-бы модифицировать оружия</p>
+			</div>
+			<div class="panel" style="max-height: 100%; margin-top: 5px;">
+			  <p>Makarow Pistol / AK-47 Kalash - Оружия из Atomic Heart, со своими кассетниками.</p>
+			</div>
+		</div>
+		<button class="accordion">[АДДОН] Black Hole</button>
+		<div class="panel">
+		  <h4>Аддон Black Hole добавляет новые энтити в игру - Чёрные дыры. Одна из них доступна только админам и может съедать пропы, а вторая только притягивает и доступна всем.</h2>
+		  <button onclick="goto('https://steamcommunity.com/sharedfiles/filedetails/?id=2943005813')" 
+		      style="width: 15%; margin-top: 5px; background-color: #353535">Мастерская Steam</button><br/>
+			<iframe width="640" height="360" style="margin-top: 5px;" src="https://www.youtube.com/embed/JPS2cZb52MA" title="чёрная дыра" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+		</div>
+		<button class="accordion">[АДДОН] Disintegrator</button>
+		<div class="panel">
+		  <h4>Аддон Disintegrator добавляет улучшенный удалитель. с новыми эффектами и возможностями.</h2>
+		  <button onclick="goto('https://steamcommunity.com/sharedfiles/filedetails/?id=2940577632')" 
+		        style="width: 15%; margin-top: 5px; background-color: #353535">Мастерская Steam</button><br/>
+			<iframe width="640" height="360" style="margin-top: 5px;" src="https://www.youtube.com/embed/vlXnAQqYjlU" title="дезинтегрировать" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+		</div>
+		<button class="accordion">[СБОРКА] HitRush</button>
+		<div class="panel">
+		  <h4>HitRush - это сборка-пародия, на режим от datae - Beatrun. В отличие от БитРана, механики паркура можно использовать в любом режиме. И ему не требуется бинарный модуль, который может своровать ваши данные ;)</h2>
+			<button onclick="goto('https://steamcommunity.com/sharedfiles/filedetails/?id=2887532303')" 
+		      style="width: 15%; margin-top: 5px; background-color: #353535">Мастерская Steam</button><br/>
+		 	<iframe width="640" height="360" style="margin-top: 5px;" src="https://www.youtube.com/embed/zH1aswUYjcQ" title="
+ЛУЧШИЙ АНАЛОГ BEATRUN | Собираем ПАРКУР сборку" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+		  <img src="img/hitrush/hitrush.jpg" height="360"/>
+			<div class="panel" style="max-height: 100%; margin-top: 5px;">
+			  <p>Fall Effect - Добавляет красивый эффект падения игрока</p>
+			</div>
+			<div class="panel" style="max-height: 100%; margin-top: 5px;">
+			  <p>Cinematic Fall Damage Sound - Добавляет кинематографичный звук падения.</p>
+			</div>
+		</div>
+		<button class="accordion">[РЕЖИМ] Project Avatar</button>
+		<div class="panel">
+		  <h4>Project Avatar - это режим, сюжет которого основан на кучке испытуемых которые обнаружили себя в симуляции, и учёных чья задача - удержать испытуемых в симуляции. Именно с него началась история RG Dev.</h2>
+			<p>В разработке...</p>
+		</div>
 	</div>
-	<div id="links" style="display: none;">
-		<p style="text-align: center" id="links-p"><span style="font-size: 35px;">Cсылки</span><br/>Project Avatar/Discord<button id="discord1" style="margin-left: 5px;" onclick="opensite('https://discord.gg/ZUFua2s94H')">&#10148;</button><br/>
-		RG Studio/Discord<button id="discord2" style="margin-left: 5px;" onclick="opensite('https://discord.gg/rg-studio-590971159244177427')">&#10148;</button><br/>
-		Github<button id="github" style="margin-left: 5px;" onclick="opensite('https://github.com/RG-Developers')">&#10148;</button><br/>
-		YouTube<button id="youtube" style="margin-left: 5px;" onclick="opensite('https://youtube.com/@rgdevteam')">&#10148;</button></p>
+	<div id="team" class="h_tabcontent" style="display:none;align-items:center;text-align: center;">
+		<h3 class="centered">Наша Команда</h3>
+		<button class="accordion centered" style="width: 40%;">Андрей Крафтов</button>
+		<div class="panel" style="width: 40%;">
+		  <p>Глава RG Dev, Саунд-Дизайнер, Дизайнер, Художник, Моделлер, Комьюнити-менеджер</p></br>
+		</div>
+		<button class="accordion centered" style="width: 40%">Neurofox / Илья Старков</button>
+		<div class="panel" style="width: 40%;">
+		  <p>Со-основатель RG Dev, Создатель бекгрундов</p></br>
+		</div>
+		<button class="accordion centered" style="width: 40%">Феодосий Кравченко</button>
+		<div class="panel" style="width: 40%;">
+		  <p>Комьюнити-менеджер</p></br>
+		</div>
+		<button class="accordion centered" style="width: 40%">Benry</button>
+		<div class="panel" style="width: 40%;">
+		  <p>Кодер</p></br>
+		</div>
+		<button class="accordion centered" style="width: 40%">BigKiry</button>
+		<div class="panel" style="width: 40%;">
+		  <p>Кодер</p></br>
+		</div>
+		<button class="accordion centered" style="width: 40%">Nyarkus</button>
+		<div class="panel" style="width: 40%;">
+		  <p>Маппер</p></br>
+		</div>
+		<button class="accordion centered" style="width: 40%">nz</button>
+		<div class="panel" style="width: 40%;">
+		  <p>Маппер</p></br>
+		</div>
 	</div>
-	<div id="announcements" style="display: none;"><p id="announcements-p"></div>
+	<div id="links" class="h_tabcontent" style="display:none;align-items:center;text-align: center">
+		<h2 class="centered">Ссылки</h2>
+		<button onclick="goto('https://discord.gg/ZUFua2s94H')" 
+		        style="width: 15%; margin-top: 5px; background-color: #0000;min-width: 200px;">RG Dev Community Discord</button><br/>
+		<button onclick="goto('https://discord.gg/rg-studio-590971159244177427')" 
+		        style="width: 15%; margin-top: 5px; background-color: #0000;min-width: 200px;">RG Studio Discord</button><br/>
+		<button onclick="goto('https://github.com/RG-Developers')" 
+		        style="width: 15%; margin-top: 5px; background-color: #0000;min-width: 200px;">RG Dev Github</button><br/>
+		<button onclick="goto('https://youtube.com/@rgdevteam')" 
+		        style="width: 15%; margin-top: 5px; background-color: #0000;min-width: 200px;">RG Dev Youtube</button><br/>
+	</div>
+	<div id="announcements" class="h_tabcontent" style="display:none;align-items:center;">
+		<h2 class="centered">Объявления</h2>
+		<p>20.03.23: Сайт обновлён</p>
+		<p>05.03.23: Выпуск аддона Black Hole</p>
+		<p>04.03.23: Сайт создан. Вы сейчас на нём!</p>
+		<p>01.03.23: Выпуск аддона Disintegrator</p>
+		<p>25.01.23: Пол года RG Dev</p>
+		<p>29.07.22: Крафтов встал на пост главы команды.</p>
+		<p>29.07.22: NeAleks сошёл с поста главы команды.</p>
+		<p>25.06.22: Появление дискорд-сервера PROJECT AVATAR (позднее - RG Dev Community)</p>
+		<p>25.06.22: Начало разработки Avatar Hunt (позднее - Project Avatar)</p>
+		<p>25.06.22: Появление RG Dev</p>
+	</div>
 	<script type="text/javascript" src="main.js"></script>
 </body>
 </html>
